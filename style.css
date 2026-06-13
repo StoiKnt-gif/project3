@@ -50,6 +50,7 @@ nav ul li {
 nav ul li a {
     color: black;
     text-decoration: none;
+    transition: color 0.2s ease-in;
 }
 
 nav ul li a:hover {
@@ -68,62 +69,97 @@ nav ul li a:hover {
 }
 
 
-.hero-section {
+.hero {
     display: flex;
     margin: 40px 20px;
-    
+
 }
 
-.hero-start {
+.start {
     width: min(969px, 100%);
 }
-.hero-head h2{
-    font-size: clamp(23px,3vw,24px);
+
+.stage h2 {
+    font-size: clamp(23px, 3vw, 24px);
 }
 
-.hero-head {
+.stage {
     text-align: center;
     margin-bottom: 9px;
 }
 
-.hero-answer {
+.answer {
     width: min(969px, 100%);
     margin: 5px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: clamp(13px,3vw,15px);
+    font-size: clamp(13px, 3vw, 15px);
 }
 
-.hero-image {
+.image {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero-image img {
+.image img {
     width: min(590px, 90%);
     border-radius: 7px;
 }
-.buy-app{
+
+.buy-app {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
     border-radius: 10px;
     background-color: rgba(76, 204, 255, 0.244);
     border: 1px solid rgba(31, 42, 43, 0.878);
-    font-size: clamp(13px,3vw,15px);
+    font-size: clamp(13px, 3vw, 15px);
     color: rgba(24, 24, 24, 0.93);
     cursor: pointer;
     transition: all 0.2s ease-in;
 }
-.buy-app:hover{
+
+.buy-app:hover {
     background-color: rgba(77, 175, 250, 0.344);
     color: black;
     border: 1px solid rgba(42, 57, 56, 0.895);
 }
-.sepration{
+
+.sepration {
     height: 5px;
     background-color: rgba(0, 0, 0, 0.615);
     margin: 70px 0;
+}
+
+.feature-answer ul li {
+    list-style: none;
+}
+
+.feature-answer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.feature-head {
+    display: block;
+    text-align: center;
+    margin-bottom: 9px;
+}
+
+
+
+
+
+@media (max-width:1200px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buy-app {
+        margin: 10px auto;
+    }
 }
