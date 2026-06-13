@@ -149,6 +149,123 @@ nav ul li a:hover {
     margin-bottom: 9px;
 }
 
+.use-answer ul li {
+    list-style: none;
+}
+
+.use-answer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.use-head {
+    display: block;
+    text-align: center;
+    margin-bottom: 9px;
+}
+
+.test-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 50px;
+}
+
+.comments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 30px;
+}
+
+.box {
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(105%);
+    background-color: rgba(106, 239, 239, 0.529);
+}
+
+.box p:nth-child(1) {
+    font-size: clamp(13px, 3vw, 16px);
+    margin-bottom: 5px;
+}
+
+.box p:nth-child(2) {
+    font-size: clamp(13px, 3vw, 15px);
+    margin-left: 5px;
+}
+
+.box p:nth-child(3) {
+    font-size: clamp(13px, 3vw, 15px);
+    margin-left: 5px;
+}
+
+.reply {
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.reply:hover {
+    color: rgba(255, 147, 31, 0.879);
+}
+
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-head h2 {
+    font-size: clamp(24px, 3vw, 30px);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.cta-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cta-answer p {
+    text-align: center;
+}
+
+.end-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 10px;
+    margin: 20px 10px;
+}
+
+.end a {
+    color: rgba(36, 36, 36, 0.905);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.end a:hover {
+    color: black;
+}
+
+
 
 
 
@@ -161,5 +278,50 @@ nav ul li a:hover {
 
     .buy-app {
         margin: 10px auto;
+    }
+
+    .image {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width:1025px) {
+    .comments {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 30px;
+    }
+
+}
+
+@media (max-width:675px) {
+    .comments {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .end-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 10px;
+        margin: 20px 10px;
+    }
+
+}
+
+@media (max-width:550px) {
+    .nav-profile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 5px;
+    }
+
+    nav ul {
+        gap: 10px;
     }
 }
